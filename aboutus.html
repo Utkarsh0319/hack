@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Svaas</title>
+    <script src="https://kit.fontawesome.com/8310cd1fc3.js" crossorigin="anonymous"></script> 
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+    <style>
+        
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+     
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Copperplate', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #000000;
+}
+
+.nav-logo {
+     font-size: 2.1rem; 
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+     font-size: 24px;
+      font-style: normal; 
+      font-variant: normal;
+       font-weight: 700; 
+       line-height: 26.4px; 
+      color: #202020; 
+}
+
+.paralax2{
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+
+         .paralax2{
+         background-image:url(stetho1.jpg),linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1) );
+         height: 70rem;
+         width: 100%;
+         padding: 10rem  ;
+         }
+         /* #paralax_wali_heading{
+       position: absolute;
+       z-index: 1000;
+       height:30rem;
+       width: 40rem;
+} */
+.matter{
+         height:100rem;
+         background-color: rgb(255, 255, 255);
+         margin: auto;
+         font-size: 2rem;
+         text-align: justify;
+         }
+
+
+#footer{
+    height:30rem;
+    background-color: #202020;
+    width:100%;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+#footer>div{
+    color: #fff; 
+    width:50rem;
+}
+.fadeIn, #heading_for_paralax2{
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         @-webkit-keyframes heading_for_paralax2 {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes heading_for_paralax2 {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         .fadeIn , #heading_for_paralax2{
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+         }
+/* for nav bar responsiveness */
+@media only screen and (max-width: 768px) {
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 0, 0.05);
+                z-index: 20000;
+        }
+    
+        .nav-menu.active {
+            left: 0;
+        }
+    
+        .nav-item {
+            margin: 2.5rem 0;
+        }
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+        .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    }
+</style>
+</head>
+<body>
+
+   <!-- nav bar html starts -->
+    <header class="header">
+    <nav class="navbar">
+        <a href="home.html" class="nav-logo">Svaas</a>
+        <ul class="nav-menu">
+            <li class="nav-item" style="z-index: 1000;">
+                <a href="product.html" class="nav-link">PRODUCT</a>
+            </li>
+            <li class="nav-item" style="z-index: 1000;">
+                <a href="milestones.html" class="nav-link">MILESTONES</a>
+            </li>
+            <li class="nav-item" style="z-index: 1000;">
+                <a href="aboutus.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item" style="z-index: 1000;">
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </li>
+            
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+   </header>
+   <!-- nav bar html ends -->
+
+
+</div> 
+
+<!-- <div class="paralax2">
+    <br><br><br><br><br><!--<div id="div_for_heading_paralax2" style="height:30rem; width:90rem; background-color: #fff;background:linear-gradient(to right, rgb(250, 242, 242,0.5), rgb(39, 39, 39,1));; align-content: center; align-items: center;"> -->
+    <!-- <h1 id="heading_for_paralax2" style="font-size: 10rem;color: rgb(255, 255, 255); text-shadow: -1px -1px 0 #000, 4px -1px 0 #000, -1px 4px 0 #000, 4px 4px 0 #000;"> &nbsp;&nbsp; SVAAS</h1>
+    <br><br><br><br><br>
+    <h3 class="fadeIn" style="font-size: 3rem; color: rgb(255, 255, 255); text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 2px 0 #000, 2px 2px 0 #000;"> &nbsp;&nbsp; AFFORDABLE | PORTABLE | EFFICIENT </h3>
+</div></div>  --> 
+
+<div class="matter" style="margin: 10rem;"><h4> Ventilators has seen the spike in its usage and sale since covid-19. Many companies came into business during this period and released new ventilators or products related to it.</h4><br> 
+   <h1 style="text-align: center;"><b>BUT</b></h1> <br><h3 style="text-align: center;">This ventilator is unique in terms of Price, Portability and Usage.</h3> </div>
+
+
+
+
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+    <!-- Section: Social media -->
+    <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="background-color: rgb(46, 46, 46); color: white;"
+  >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span><h3>Get connected with us on social networks:</h3></span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div><h2>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a></h2>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h1 class="text-uppercase fw-bold mb-4" style="font-size: 5rem;">
+              SVAAS 
+            </h1>
+           
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h3 class="text-uppercase fw-bold mb-4">
+              <U>Product</U>
+            </h3>
+            <p>
+              <a href="product.html" class="text-reset" style="font-size: 2rem;">Svaas Ventilator</a>
+            </p>
+           
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h3 class="text-uppercase fw-bold mb-4">
+                <u>Useful links</u>
+            </h3>
+            <h4>
+              <a href="milestones.html" class="text-reset">MILESTONES</a>
+            </h4>
+            <h4>
+              <a href="product.html" class="text-reset">PRODUCT</a>
+            </h4>
+            <h4>
+              <a href="contact.html" class="text-reset">CONTACT</a>
+            </h4>
+            <h4>
+              <a href="aboutus.html" class="text-reset">ABOUT US</a>
+            </h4>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h3 class="text-uppercase fw-bold mb-4">
+              <u>Contact</u>
+            </h3>
+            <h4>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </h4>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div> -->
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+<script>
+
+
+//starting for navbar jS code
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+//nav bar code endes jS here
+
+
+</script>
+
+
+
+
+</header>
+</body>
+</html>
