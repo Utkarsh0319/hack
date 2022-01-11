@@ -111,7 +111,7 @@ a {
        width: 40rem;
 } */
 .matter{
-         height:100rem;
+         height:25rem;
          background-color: rgb(255, 255, 255);
          margin: auto;
          font-size: 2rem;
@@ -200,6 +200,52 @@ a {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+    .matter{
+      height: 50rem;
+    }
+    }
+    @media only screen and (max-width: 480px){
+      .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 0, 0.05);
+                z-index: 20000;
+        }
+    
+        .nav-menu.active {
+            left: 0;
+        }
+    
+        .nav-item {
+            margin: 2.5rem 0;
+        }
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+        .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .matter{
+      height: 100rem;
+    } 
     }
 </style>
 </head>
@@ -237,8 +283,12 @@ a {
 </div> 
 
 
-<div class="matter" style="margin: 10rem;"><h4> Ventilators has seen the spike in its usage and sale since covid-19. Many companies came into business during this period and released new ventilators or products related to it.</h4><br> 
-   <h1 style="text-align: center;"><b>BUT</b></h1> <br><h3 style="text-align: center;">This ventilator is unique in terms of Price, Portability and Usage.</h3> </div>
+<div class="matter" style="margin: 10rem;">
+  We all have seen people suffer during recent times due to unavailability of Ventilator.<br> 
+  Since the cost of Ventilater is the biggest reason for it's unavailability to the common-Man, we thought as engineering students it was our duty to try and solve it so
+  we started this project as our major project for our final year of engineering but it grew into something magnificent while we were working on it. Now we have a vision to transform this project into a market ready product with is at an affordable price with necessary functionalities available.
+  We are tirelessly working and testing it rigorously to achieve our final goal. 
+</div>
 
 
 
