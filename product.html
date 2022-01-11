@@ -116,6 +116,7 @@ a {
          margin: auto;
          font-size: 2rem;
          text-align: justify;
+         margin: 10rem;
          }
 
 
@@ -206,6 +207,71 @@ a {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+    .matter{
+      height: 90rem;
+    }
+    #img1{
+          height: 20rem;
+          width: 25rem;
+        }
+        #img2{height: 20rem;
+          width: 30rem;}
+    }
+    @media only screen and (max-width: 480px) {
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow:
+                0 10px 27px rgba(0, 0, 0, 0.05);
+                z-index: 20000;
+        }
+    
+        .nav-menu.active {
+            left: 0;
+        }
+    
+        .nav-item {
+            margin: 2.5rem 0;
+        }
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+        .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .matter{
+      margin:2rem;
+      height: 150rem;
+    }
+    #img1{
+          height: 20rem;
+          width: 95%;
+          margin: auto;
+
+        }
+        #img2{
+          height: 20rem;
+          width: 95%;
+          margin: auto;
+          margin-top: 2rem;
+        }
     }
 </style>
 </head>
@@ -244,7 +310,7 @@ a {
 
 
 
-<div class="matter" style="margin: 10rem;">
+<div class="matter">
   <p style="margin-left: 1rem;">
   For the sake of patient safety, a ventilator should be completly secure and should also come outfitted with some critical event safety features.<br>
   This ventilator has been provided with-
